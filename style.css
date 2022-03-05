@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+:root {
+    --cor00: #FFFFFF; 
+    --cor01: #F0F0F0;
+    --cor02: #61686A;
+    --cor03: #313336;
+    --cor04: #FFC200;
+
+    --font-padrao: Arial, Helvetica, sans-serif; 
+}
+
+/* Principal controlador do body */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor01);
+    font-family: var(--font-padrao);
+}
+
+/* Controlador da Div principal, onde ficam todos os elementos do email. */
+.principal {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor01);
+    width: 50%;
+}
+
+/* Controlador da tag header, onde se encontra o logo da NIBO. */
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+}
+
+/* Controlador da logo da NIBO, dentro da tag header. */
+.logo {
+    display: flex;
+    height: 21px;
+    width: 51px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    
+}
+/* Principal controlador do background com os nomes 'black week'. Inserido a partir do CSS para um controle mais amplo e simples */
+.background {
+    display: flex;
+    flex-direction: column;
+    background-image: url(_resource/blackfriday-bg-emails.png);
+    background-repeat: repeat-x;
+    
+    /* Como ainda é uma div, essas instruções servem para poder alinhar os elementos DENTRO da div, como o texto, o contador de tempo e o termo 'live gratuita' */
+    align-items: center;
+    justify-content: center;
+}
+/* Feito para controlar a div onde encontra-se a imagem "Live gratuita" */
+.youtube_live {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+}
+/* Usado para controlar o tamanho da imagem "live gratuita" */
+.live {
+    width: 100%;
+    width: 7em;
+}
+
+/* Feito para controlar o texto dentro da div background. */
+.texto { 
+    color: var(--cor00);
+    font-size: 1.3em;
+    text-align: center;
+}
+/* Controlador da div onde encontra-se o contador. */
+.contador {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+/* Usado para controlar o contador. */ 
+.contador_img {
+    display: flex;
+    width: 250px;
+    max-width: 300px;
+    height: 3em;
+    min-height: .3em;
+    max-height: 3em;
+}
+/* Usado somente para fazer algumas poucas configurações pontuais desde "Olá [...]" até "(Horário de brasília)" */ 
+main {
+    background-color: var(--cor00);
+}
+
+/* Serve para controlar todo o trecho de apresentação ao usuário */
+.introducao {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-top: 5px;
+    text-align: justify;
+}
+
+/* Essa classe controla a primeira div da parte de agenda. */
+.agenda {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor01);
+    padding: 15px;
+}
+
+/* É criada uma segunda div para que seja inserido a "linha amarela" a esquerda do texto. */
+.agenda_borda {
+    border-left: 5px solid var(--cor04);
+}
+
+/* Usado para controlar o texto dentro das duas divs. */
+.agenda_texto {
+    padding-left: 15px
+}
+
+/* Usado para controlar a div que vai principalmente de "Confira" [...] até "Te aguardamos!" */ 
+.bottom {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor00);
+}
+
+/* Usado para controlar todo o texto que fala sobre o que acontecerá durante a apresentação. */ 
+.bottom_text {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    text-align: justify;
+}
+
+/* Usado para espaçar o checkmark do texto. */
+.check {
+    padding-right: 10px;
+}
+/* Usado para controlar o alinhamento do botão. */
+.botao { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Usado para controlar as características do botão */
+button {
+    width: 160px;
+    height: 55px;
+    background-color: var(--cor04);
+    border-radius: 5px;
+    border: none;
+}
+
+/* Usado para causar uma leve alteração ao passar o mouse por cima do botão. */
+button:hover {
+    cursor: pointer;
+    background-color: #ffc40096;
+    animation-delay: .5sec;
+}
+
+/* Usado para controlar o texto após o botão e antes dos icones das redes sociais. */
+.duracao {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+}
+
+/* Feito para controlar a div onde encontram-se os ícones das redes sociais. */
+.div_footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor03);
+}
+
+/* Feito para controlar as imagens dentro da div citada anteriormente. */
+.footer_img {
+    padding-top: 8px;
+    padding-right: 15px;
+    padding-bottom: 8px;
+}
+
+/* Feito propriamente para controlar o Footer final da página. */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Feito para controlar os links inseridos dentro do paragrafo no footer. */
+footer > p > a {
+    text-decoration: none;
+    color: rgb(34, 141, 184);
+}
